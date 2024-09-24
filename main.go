@@ -24,8 +24,6 @@ func main() {
 	router.Use(cors.New(cors.Config{
 		AllowOrigins: []string{"*"},
 		AllowMethods: []string{"*"},
-		// AllowHeaders:  []string{"Origin"},
-		// ExposeHeaders: []string{"Content-Length"},
 	}))
 	router.Static("/results", "./results")
 	router.POST("/blur", blurImage)
